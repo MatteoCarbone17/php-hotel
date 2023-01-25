@@ -60,19 +60,44 @@
         </h1>
     </header>
     <main>
-    <main>
-        <pre>
-         <?php var_dump($hotels) ?>
+        <main>
+            <pre>
+         <?php var_dump($hotels);
+            ?>
         </pre>
-        <table class="table table-dark table-striped ">
-            <?php foreach ($hotels as $hotelList) {
-                foreach ($hotelList as $key => $element) {
-                    echo "<tr> <td> {$key} :    {$element}</tr></td>";
-                }}
-                 ?>
-        </table>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td> 
+                            Name: 
+                            <?php foreach ($hotels as $hotelList) {
+                                  echo '  ' . $hotelList["name"] . '  ||   ';
+                                }
+                            ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                             Description :
+                            <?php foreach ($hotels as $hotelList) {
+                                  echo  '  ' .  $hotelList["description"] . '  ||   ';
+                                }
+                            ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                             Vote :
+                            <?php foreach ($hotels as $hotelList) {
+                                  echo  '  ' .  $hotelList["vote"] . '  ||   ';
+                                }
+                            ?>
+                        </td>
+                    </tr>
 
-    </main>
+                </tbody>
+            </table>
+        </main>
 </body>
 
 </html>
