@@ -60,22 +60,17 @@
         </h1>
     </header>
     <main>
+    <main>
         <pre>
          <?php var_dump($hotels) ?>
         </pre>
         <table class="table table-dark table-striped ">
-            <caption>
-                <h1>
-                    Hotels
-                </h1>
-            </caption>
             <?php foreach ($hotels as $hotelList) {
-                foreach ($hotelList as $key => $value) {
-                    echo "<th> {$key} </th> : <tr> <td> {$value}</tr></td> ";
+                foreach ($hotelList as $key => $element) {
+                    echo "<tr> <td> {$key} :    {$element}</tr></td>";
                 }}
                  ?>
         </table>
-
 
     </main>
 </body>
