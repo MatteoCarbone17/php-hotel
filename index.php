@@ -52,25 +52,38 @@
 
     <header>
         <h1>
-            Hotels 
+            Hotels
         </h1>
     </header>
     <main>
-
         <pre>
          <?php var_dump($hotels) ?>
         </pre>
-        <ul>
-            <li>
-                <?php foreach($hotels as $value => $hotelList){
-                     foreach($hotelList as $element){
-                        echo  '  ' .  $element;
-                     }
-                     
+        <table>
+        <?php foreach ($hotels as $hotelList) {
+                    foreach ($hotelList as $key => $value) {
+                        echo $key . ': ' .  $value . '// ';
+                    }
                 }
                 ?>
-            </li>
-        </ul>
+                <tr>
+                    <td><?php foreach ($hotels as $key => $hotelList)  echo $hotelList ?></td>
+                    <td>Colonna 2</td>
+                </tr>
+                <tr>
+                    <td>Dato 1,1</td>
+                    <td>Dato 1,2</td>
+                </tr>
+            <tr>
+                <td>Dato 2,1</td>
+                <td>Dato 2,2</td>
+            </tr>
+            <tr>
+                <td>Dato 3,1</td>
+                <td>Dato 3,2</td>
+            </tr>
+        </table>
+
     </main>
 </body>
 
