@@ -60,29 +60,18 @@
          <?php var_dump($hotels) ?>
         </pre>
         <table>
-        <?php foreach ($hotels as $hotelList) {
-                    foreach ($hotelList as $key => $value) {
-                        echo $key . ': ' .  $value . '// ';
-                    }
+            <caption>
+                <h1>
+                    Hotels
+                </h1>
+            </caption>
+            <?php foreach ($hotels as $hotelList) {
+                foreach ($hotelList as $key => $value) {
+                    echo "<th> {$key} </th> :  <tr><td> {$value}</tr></td>  ";
                 }
-                ?>
-                <tr>
-                    <td><?php foreach ($hotels as $key => $hotelList)  echo $hotelList ?></td>
-                    <td>Colonna 2</td>
-                </tr>
-                <tr>
-                    <td>Dato 1,1</td>
-                    <td>Dato 1,2</td>
-                </tr>
-            <tr>
-                <td>Dato 2,1</td>
-                <td>Dato 2,2</td>
-            </tr>
-            <tr>
-                <td>Dato 3,1</td>
-                <td>Dato 3,2</td>
-            </tr>
+            }  ?>
         </table>
+
 
     </main>
 </body>
